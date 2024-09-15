@@ -1,3 +1,15 @@
 <div class="home">
+    <div class="navbar mat-elevation-z2">
+        <div class="shop-title center-item c-pointer">WoodnCrafts</div>
+        <div class="center-item account-link">
+            <mat-icon fontIcon="account_circle" class="account-circle c-pointer"></mat-icon>
+        </div>
+    </div>
 
+    <div class="tiles">
+        <div class="tiles-heading">Catalog</div>
+        @for(tile of homeTiles; track tile.imagePath) {
+            <home-tile [imagePath]="tile.imagePath" [title]="tile.title"></home-tile>
+        }
+    </div>
 </div>
