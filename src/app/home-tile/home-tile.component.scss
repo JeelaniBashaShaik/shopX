@@ -8,4 +8,14 @@
       0 4px 4px hsl(0deg 0% 0% / 0.075),
       0 4px 4px hsl(0deg 0% 0% / 0.075)
     ;
+    border-radius: 15px;
+}
+
+.tile-title {
+  color: #bc6a3c;
+}
+
+.mat-mdc-card-header {
+  padding: 10px 0;
+  justify-content: center;
 }

@@ -2,8 +2,23 @@
     <div class="navbar mat-elevation-z2">
         <div class="shop-title center-item c-pointer">WoodnCrafts</div>
         <div class="center-item account-link">
-            <mat-icon fontIcon="account_circle" class="account-circle c-pointer"></mat-icon>
+            @if (user?.picture) {
+                <div class="c-pointer" [matMenuTriggerFor]="menu">
+                <img class="br-50" src={{user.picture}} height="32" width="32" />
+                </div>
+
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="logout()">Logout</button>
+                  </mat-menu>
+            } @else {
+                <div class="account-circle c-pointer" (click)="login()">
+                    <img src="../../assets/images/google.png" height="32" width="32">
+                </div>
+            } 
         </div>
+    </div>
+    <div class="landing-image center-item">
+        <img src="../../assets/images/laser_landing.webp" height="100%" width="95%" style="border-radius:15px;">
     </div>
 
     <div class="tiles">

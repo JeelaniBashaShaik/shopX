@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #0273d4;
+    background-color: #bc6a3c;
 }
 
 .shop-title {
@@ -32,6 +32,7 @@
     color: white;
     justify-content: end;
     padding-right: 15px;
+    position: relative;
 }
 
 .account-circle {
@@ -53,4 +54,17 @@
     padding-left: 15px;
     width: 100%;
     margin-top: 30px;
+    color: #bc6a3c;
+}
+
+.account-popup {
+    position: absolute;
+    height: 100px;
+    width: 70px;
+    border: 1px solid black;
+}
+
+.landing-image {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }

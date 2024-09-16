@@ -8,8 +8,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     align-items: center;
     width: 100%;
     height: 100%;
+    justify-content: center;
 }
 
 .c-pointer {
     cursor: pointer;
+}
+
+.br-50 {
+    border-radius: 50%;
 }
