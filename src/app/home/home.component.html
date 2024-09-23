@@ -1,6 +1,6 @@
 <div class="home">
     <div class="navbar mat-elevation-z2">
-        <div class="shop-title center-item c-pointer">WoodnCrafts</div>
+        <div class="shop-title center-item c-pointer">ShopX</div>
         <div class="center-item account-link">
             @if (user?.picture) {
                 <div class="c-pointer" [matMenuTriggerFor]="menu">
@@ -11,20 +11,27 @@
                     <button mat-menu-item (click)="logout()">Logout</button>
                   </mat-menu>
             } @else {
-                <div class="account-circle c-pointer" (click)="login()">
-                    <img src="../../assets/images/google.png" height="32" width="32">
+                <div class="account-circle c-pointer center-item" (click)="login()">
+                    <img src="../../assets/images/google.png" height="24" width="24">
+                    <div style="margin-left: 10px">Sign in with Google</div>
                 </div>
             } 
         </div>
     </div>
-    <div class="landing-image center-item">
-        <img src="../../assets/images/laser_landing.webp" height="100%" width="95%" style="border-radius:15px;">
+    <div class="center-item">
+        <img class="landing-image" src="../../assets/images/laser_landing2.webp" height="100%" width="95%">
     </div>
 
-    <div class="tiles">
-        <div class="tiles-heading">Catalog</div>
-        @for(tile of homeTiles; track tile.imagePath) {
-            <home-tile [imagePath]="tile.imagePath" [title]="tile.title"></home-tile>
-        }
+    <div class="w-100">
+        <div class="tiles-heading w-95">Featured products</div>
     </div>
+    
+    <div class="w-100" style="display: flex;justify-content: center;">
+        <div class="tiles w-95">
+            @for(tile of homeTiles; track tile.imagePath; let first = $first) {
+                <home-tile [imagePath]="tile.imagePath" [title]="tile.title"></home-tile>
+            }
+        </div>
+    </div>
+   
 </div>

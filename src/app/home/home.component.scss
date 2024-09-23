@@ -1,22 +1,25 @@
 .home {
-    display: flex;
-    flex-direction: column;
+   // display: flex;
+   // flex-direction: column;
     height: 100vh;
     width: 100%;
+    //overflow-y: auto;
 }
 
 .navbar {
     width: 100%;
-    height: 48px;
+    height: 52px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #bc6a3c;
+    background-color: #D3C5E5;
+    position: static;
+    top: 0;
 }
 
 .shop-title {
-    font-size: large;
-    color: white;
+    font-size: 24px;
+    color: black;
     width: auto;
     padding-left: 15px;
 }
@@ -36,35 +39,31 @@
 }
 
 .account-circle {
-    height: 32px;
-    width: 32px;
-    font-size: 32px;
+    height: 34px;
+    width: 170px;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 14px;
+    color: black;
+    padding: 0 5px;
 }
 
 .tiles {
     display: flex;
-    width: 100%;
-    flex-wrap: wrap;
+    flex-direction: row;
+    overflow-y: auto;
 }
 
 .tiles-heading {
-    font-size: 26px;
+    font-size: 22px;
     display: flex;
-    justify-content: start;
-    padding-left: 15px;
+    justify-content: center;
     width: 100%;
-    margin-top: 30px;
-    color: #bc6a3c;
-}
-
-.account-popup {
-    position: absolute;
-    height: 100px;
-    width: 70px;
-    border: 1px solid black;
+    margin: 30px 0;
+    color: black;
 }
 
 .landing-image {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }

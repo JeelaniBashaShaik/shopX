@@ -7,11 +7,12 @@ import { HomeTileComponent } from '../home-tile/home-tile.component';
 import { GoogleIdentityService } from '../services/google-identity.service';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MatIconModule, HomeTileComponent, MatMenuModule, MatButtonModule],
+  imports: [MatIconModule, HomeTileComponent, MatMenuModule, MatButtonModule, CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -28,6 +29,10 @@ export class HomeComponent {
       title: 'Toy houses'
     },
     {
+      imagePath: '../assets/images/laser_letters.png',
+      title: 'Educational'
+    },
+    {
       imagePath: '../assets/images/laser_art.jpg',
       title: 'Wall art',
     },
@@ -42,6 +47,9 @@ export class HomeComponent {
     {
       imagePath: '../assets/images/laser_lamp.jpg',
       title: 'Lamps'
+    },{
+      imagePath: '../assets/images/laser_puzzle.png',
+      title: 'Puzzles'
     },
   ]
 
