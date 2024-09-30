@@ -1,4 +1,4 @@
-<mat-card class="tile-card c-pointer" [routerLink]="'catalog'" appearance="outlined" [@cardAnimation]="state" (mouseenter)="setState('hovered')" (mouseleave)="setState('normal')" (click)="setState('clicked')">
+<mat-card class="tile-card c-pointer" [routerLink]="'/catalog'" appearance="outlined" [@cardAnimation]="state" (mouseenter)="setState('hovered')" (mouseleave)="setState('normal')" (click)="setState('clicked')">
     <img mat-card-image src={{imagePath}} height="200" width="175">
     <mat-card-header class="center-item">
       <mat-card-title class="tile-title">{{title}}</mat-card-title>

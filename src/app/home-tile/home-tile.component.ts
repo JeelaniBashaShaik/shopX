@@ -24,7 +24,7 @@ import { Router, RouterModule } from '@angular/router';
         opacity: 1
       })),
       transition('normal <=> hovered', [
-        animate('400ms ease')
+        animate('200ms ease')
       ]),
       transition('hovered <=> clicked', [
         animate('200ms ease-in')

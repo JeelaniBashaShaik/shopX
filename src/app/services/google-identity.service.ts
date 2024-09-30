@@ -12,11 +12,12 @@ export class GoogleIdentityService {
   login() {
     const google = (window as unknown as any).google;
     google.accounts.id.initialize({
-      client_id: '',
+      client_id: '874718926305-rc7qeb6qabqtea38oj2s2lqu522kq8gc.apps.googleusercontent.com',
       callback: (data: any) => {
         if (data?.credential) {
           this.isLoggedIn = true;
           this.idToken = data.credential;
+          console.log(this.idToken, 'idtoken');
           this.user = JSON.parse(atob(data.credential.split('.')[1]));
           localStorage.setItem('shopXLoggedInUser', atob(data.credential.split('.')[1]));
           this.user$.next(this.user);

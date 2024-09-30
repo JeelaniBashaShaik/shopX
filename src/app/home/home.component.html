@@ -1,23 +1,4 @@
 <div class="home">
-    <div class="navbar mat-elevation-z2">
-        <div class="shop-title center-item c-pointer">ShopX</div>
-        <div class="center-item account-link">
-            @if (user?.picture) {
-                <div class="c-pointer" [matMenuTriggerFor]="menu">
-                <img class="br-50" src={{user.picture}} height="32" width="32" />
-                </div>
-
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item (click)="logout()">Logout</button>
-                  </mat-menu>
-            } @else {
-                <div class="account-circle c-pointer center-item" (click)="login()">
-                    <img src="../../assets/images/google.png" height="24" width="24">
-                    <div style="margin-left: 10px">Sign in with Google</div>
-                </div>
-            } 
-        </div>
-    </div>
     <div class="center-item">
         <img class="landing-image" src="../../assets/images/laser_landing2.webp" height="100%" width="95%">
     </div>

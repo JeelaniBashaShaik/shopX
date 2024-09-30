@@ -1,1 +1,8 @@
-<p>specific-catalog works!</p>
+<div class="specific-catalog-image-container d-flex justify-center align-items-center">
+    Placeholder for this category
+</div>
+<div class="specific-catalog-list">
+    @for(product of products; track product.productId) {
+        <app-products-list-item [productDetails]="product"></app-products-list-item>
+    }
+</div>

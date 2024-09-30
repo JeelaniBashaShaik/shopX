@@ -26,3 +26,20 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;  }
 .w-100 {
     width: 100%;
 }
+
+.d-flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.basic-border-box {
+    border: 1px solid black;
+    border-radius: 10px;
+}

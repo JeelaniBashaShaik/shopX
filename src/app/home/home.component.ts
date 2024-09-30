@@ -17,12 +17,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-
-  googleIdentityService = inject(GoogleIdentityService);
-
-  isAccountPopupVisible = false;
-  user!: any;
-
   homeTiles = [
     {
       imagePath: '../assets/images/laser_house.jpeg',
@@ -55,16 +49,6 @@ export class HomeComponent {
 
   breakpointObserver = inject(BreakpointObserver)
   ngOnInit() {
-    this.googleIdentityService.user$.asObservable().subscribe(data => {
-      this.user = data;
-      console.log(this.user, 'from subs');
-    })
-      const user = localStorage.getItem('shopXLoggedInUser')
-      if(user) {
-        this.user = JSON.parse(user);
-        console.log(this.user, 'from storage')
-      }
-
       this.breakpointObserver.observe([
         'Small',
         'Medium',
@@ -75,12 +59,4 @@ export class HomeComponent {
       })
   }
 
-  login() {
-    this.googleIdentityService.login();
-  }
-
-  logout() {
-    this.googleIdentityService.logout();
-    this.user = {};
-  }
 }
